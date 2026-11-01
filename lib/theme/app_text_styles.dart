@@ -4,69 +4,61 @@ import 'app_colors.dart';
 class AppTextStyles {
   AppTextStyles._();
 
-  // ── BM JUA ──
-  static const TextStyle logo = TextStyle(
+  // ── BM JUA (제목, 숫자) ──
+  static const TextStyle headline = TextStyle(
+    // "하마님, 안녕하세요!"
     fontFamily: 'BMJUA',
-    fontSize: 32,
-    color: AppColors.primary,
+    fontSize: 24,
+    height: 1.3,
+    color: AppColors.textPrimary,
+  );
+  static const TextStyle number = TextStyle(
+    // "6일째", "86%"
+    fontFamily: 'BMJUA',
+    fontSize: 28,
+    height: 1.1,
+    color: AppColors.textPrimary,
+  );
+  static const TextStyle cardTitle = TextStyle(
+    // "기한 지난 문제 4개"
+    fontFamily: 'BMJUA',
+    fontSize: 21,
+    color: AppColors.textPrimary,
   );
 
-  // ── SF Pro (fontFamily를 안 쓰면 아이폰 기본 폰트 = SF Pro) ──
-  static const TextStyle screenTitle = // 화면제목
-  TextStyle(
-    fontSize: 20,
+  // ── Pretendard (본문, 버튼) ──
+  static const TextStyle body = TextStyle(
+    // 목록 글자
+    fontFamily: 'Pretendard',
+    fontSize: 14,
     fontWeight: FontWeight.w700,
-    height: 1.6,
-  );
-  static const TextStyle sectionTitle = // 섹션 제목
-  TextStyle(
-    fontSize: 18,
-    fontWeight: FontWeight.w600,
-    height: 1.6,
-  );
-  static const TextStyle cardTitle = // 카드제목
-  TextStyle(
-    fontSize: 16,
-    fontWeight: FontWeight.w600,
-    height: 1.6,
-  );
-  static const TextStyle body = // 본문
-  TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.w400,
-    height: 1.6,
-  );
-  static const TextStyle caption = // 설명
-  TextStyle(
-    fontSize: 13,
-    fontWeight: FontWeight.w400,
-    height: 1.6,
-  );
-  static const TextStyle button = // 버튼
-  TextStyle(
-    fontSize: 15,
-    fontWeight: FontWeight.w600,
-    height: 1.0,
-  );
-  static const TextStyle tab = // 탭
-  TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.w500,
-    height: 1.6,
+    color: AppColors.textPrimary,
   );
   static const TextStyle label = TextStyle(
-    // 입력칸 위 라벨
-    fontSize: 16,
-    fontWeight: FontWeight.w500,
-    color: AppColors.textLabel,
+    // "연속 출석"
+    fontFamily: 'Pretendard',
+    fontSize: 13,
+    fontWeight: FontWeight.w700,
+    color: AppColors.textSecondary,
   );
-
-  // ── Pretendard ──
-  static const TextStyle input = TextStyle(
-    // 입력칸 글자
+  static const TextStyle caption = TextStyle(
+    // "내일 7일 달성 시 +5"
     fontFamily: 'Pretendard',
     fontSize: 12,
-    fontWeight: FontWeight.w500,
-    height: 1.67, // 피그마 줄 높이 20px ÷ 글자 크기 12px
+    fontWeight: FontWeight.w700,
+    color: AppColors.blueDeep,
+  );
+  static const TextStyle button = TextStyle(
+    // "이어서 풀기"
+    fontFamily: 'Pretendard',
+    fontSize: 17,
+    fontWeight: FontWeight.w600,
+    color: AppColors.textOnButton,
+  );
+  static const TextStyle navLabel = TextStyle(
+    // 탭 "홈", "퀴즈"
+    fontFamily: 'Pretendard',
+    fontSize: 12,
+    fontWeight: FontWeight.w700,
   );
 }
