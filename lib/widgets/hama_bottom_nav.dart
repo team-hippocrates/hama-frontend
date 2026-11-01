@@ -16,7 +16,7 @@ class HamaBottomNav extends StatelessWidget {
     _NavItem(Icons.home_outlined, '홈'),
     _NavItem(Icons.check_circle_outline, '퀴즈'),
     _NavItem(Icons.shopping_bag_outlined, '샵'),
-    _NavItem(Icons.bar_chart, '통계'),
+    _NavItem(Icons.person_outline, '마이페이지'),
   ];
 
   @override
