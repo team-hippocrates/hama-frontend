@@ -30,23 +30,20 @@ class ThemeTestScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: double.infinity,
-        decoration: const BoxDecoration(gradient: AppColors.backgroundGradient),
+        color: AppColors.background,
         child: SafeArea(
           child: Padding(
             padding: EdgeInsets.all(20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('똑똑하마', style: AppTextStyles.logo),
-                SizedBox(height: 16),
-                Text('화면제목 20', style: AppTextStyles.screenTitle),
-                Text('본문 14 (기본 스타일)'),
-                Text('아이디', style: AppTextStyles.label),
-                Text(
-                  'example@gmail.com (Pretendard)',
-                  style: AppTextStyles.input,
-                ),
-                Text('화면 크기: ${MediaQuery.of(context).size}'), // ← 추가
+                const Text('하마님, 안녕하세요!', style: AppTextStyles.headline),
+                const Text('6일째', style: AppTextStyles.number),
+                const Text('기한 지난 문제 4개', style: AppTextStyles.cardTitle),
+                const Text('조선 최초의 한글 소설은? (기본 스타일)'),
+                const Text('연속 출석', style: AppTextStyles.label),
+                const Text('내일 7일 달성 시 +5', style: AppTextStyles.caption),
+                Text('화면 크기: ${MediaQuery.of(context).size}'),
               ],
             ),
           ),
