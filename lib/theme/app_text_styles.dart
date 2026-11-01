@@ -55,4 +55,10 @@ class AppTextStyles {
     fontWeight: FontWeight.w600,
     color: AppColors.textOnButton,
   );
+  static const TextStyle navLabel = TextStyle(
+    // 탭 "홈", "퀴즈"
+    fontFamily: 'Pretendard',
+    fontSize: 12,
+    fontWeight: FontWeight.w700,
+  );
 }
