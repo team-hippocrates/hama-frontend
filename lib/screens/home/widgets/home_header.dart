@@ -14,7 +14,7 @@ class HomeHeader extends StatelessWidget {
     return Row(
       children: [
         Expanded(
-          child: Text('$nickname님, 안녕하세요!', style: AppTextStyles.headline),
+          child: Text('$nickname님,\n안녕하세요!', style: AppTextStyles.headline),
         ),
         CoinBadge(coin: coin),
         const SizedBox(width: 8),
