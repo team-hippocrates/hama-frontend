@@ -61,4 +61,10 @@ class AppTextStyles {
     fontSize: 12,
     fontWeight: FontWeight.w700,
   );
+  static const TextStyle coin = TextStyle(
+    // 코인 숫자 "128"
+    fontFamily: 'BMJUA',
+    fontSize: 17,
+    color: AppColors.textPrimary,
+  );
 }
