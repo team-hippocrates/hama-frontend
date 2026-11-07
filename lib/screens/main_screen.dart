@@ -3,7 +3,7 @@ import '../widgets/hama_bottom_nav.dart';
 import 'home/home_screen.dart';
 import 'quiz/quiz_screen.dart';
 import 'shop/shop_screen.dart';
-import 'stats/stats_screen.dart';
+import 'mypage/mypage_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -19,7 +19,7 @@ class _MainScreenState extends State<MainScreen> {
     HomeScreen(),
     QuizScreen(),
     ShopScreen(),
-    StatsScreen(),
+    MyPageScreen(),
   ];
 
   @override
