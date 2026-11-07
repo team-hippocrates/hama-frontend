@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import '../../models/review_item.dart';
 import 'widgets/home_header.dart';
+import 'widgets/review_card.dart';
 import 'widgets/stat_card.dart';
 import 'widgets/today_quiz_card.dart';
 
@@ -16,6 +18,13 @@ class HomeScreen extends StatelessWidget {
   static const _accuracy = 86;
   static const _todaySolved = 7;
   static const _todayCorrect = 6;
+
+  // TODO(백엔드): 복습 목록 API 연결 후 실제 값으로 교체
+  static const _overdueCount = 4;
+  static const _reviewItems = [
+    ReviewItem(question: '조선 최초의 한글 소설은?', dueLabel: '2일 지남', isOverdue: true),
+    ReviewItem(question: '인플레이션의 뜻은?', dueLabel: '오늘', isOverdue: false),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +64,8 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 12),
-            // 다음 단계에서 복습 카드 추가
+            // TODO: 카드를 누르면 복습 화면으로 이동 (복습 화면 만든 뒤 연결)
+            const ReviewCard(overdueCount: _overdueCount, items: _reviewItems),
           ],
         ),
       ),
