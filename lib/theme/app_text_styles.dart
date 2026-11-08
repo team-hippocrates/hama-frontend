@@ -67,4 +67,38 @@ class AppTextStyles {
     fontSize: 17,
     color: AppColors.textPrimary,
   );
+  static const TextStyle subtitle = TextStyle(
+    // "분야는 하마가 8개 중에서…"
+    fontFamily: 'Pretendard',
+    fontSize: 15,
+    fontWeight: FontWeight.w400,
+    color: AppColors.textSecondary,
+  );
+  static const TextStyle sectionLabel = TextStyle(
+    // "문제 유형", "난이도"
+    fontFamily: 'Pretendard',
+    fontSize: 14,
+    fontWeight: FontWeight.w600,
+    color: AppColors.textPrimary,
+  );
+  static const TextStyle optionTitle = TextStyle(
+    // "객관식", 난이도 "하/중/상"
+    fontFamily: 'Pretendard',
+    fontSize: 16,
+    fontWeight: FontWeight.w700,
+    color: AppColors.textPrimary,
+  );
+  static const TextStyle optionDesc = TextStyle(
+    // "보기 4개 중 하나를 골라요"
+    fontFamily: 'Pretendard',
+    fontSize: 13,
+    fontWeight: FontWeight.w500,
+    color: AppColors.textSecondary,
+  );
+  static const TextStyle badge = TextStyle(
+    // 네모 안 "4", "OX", "가"
+    fontFamily: 'BMJUA',
+    fontSize: 18,
+    color: AppColors.textPrimary,
+  );
 }
