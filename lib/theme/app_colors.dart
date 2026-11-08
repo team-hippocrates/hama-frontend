@@ -27,4 +27,6 @@ class AppColors {
   static const Color coin = Color(0xFFF2D23C); // 코인 동그라미
   static const Color coinText = Color(0xFF7A5A00);
   static const Color danger = Color(0xFFB4483A); // "2일 지남" 같은 경고 글자
+
+  static const Color chip = Color(0xFFF1EFE7); // 분야 태그 배경
 }
