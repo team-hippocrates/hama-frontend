@@ -118,14 +118,11 @@ class _LoginScreenState extends State<LoginScreen> {
             Positioned(
               top: 104,
               right: 36,
-              child: Container(
+              child: Image.asset(
+                'assets/images/hama_bow.png',
                 width: 135,
                 height: 167,
-                decoration: BoxDecoration(
-                  color: AppColors.blueLight,
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: const Icon(Icons.image_outlined, color: AppColors.blue),
+                fit: BoxFit.contain,
               ),
             ),
           ],
