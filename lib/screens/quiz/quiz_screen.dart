@@ -17,16 +17,7 @@ class _QuizScreenState extends State<QuizScreen> {
   QuizType _type = QuizType.multipleChoice; // 처음엔 객관식 선택
   QuizDifficulty _difficulty = QuizDifficulty.normal; // 처음엔 난이도 중
 
-  static const _categories = [
-    '역사',
-    '과학',
-    '경제',
-    '직장생활 예의',
-    '문화',
-    '일반상식',
-    '스포츠',
-    '대중문화',
-  ];
+  static const _categories = ['역사', '직장생활 예의', '문화', '일반상식'];
 
   void _requestQuiz() {
     // TODO(백엔드): 선택한 유형(_type)·난이도(_difficulty)로 문제 요청 API 호출

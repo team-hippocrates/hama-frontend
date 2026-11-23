@@ -55,7 +55,7 @@ class TodayQuizCard extends StatelessWidget {
                 const SizedBox(height: 14),
                 const Row(
                   children: [
-                    _Tag('#8개 분야 랜덤'),
+                    _Tag('#4개 분야 랜덤'),
                     SizedBox(width: 6),
                     _Tag('#AI 출제'),
                   ],
