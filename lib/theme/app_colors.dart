@@ -20,8 +20,9 @@ class AppColors {
   static const Color textPrimary = Color(0xFF1E2A38); // 기본 글자
   static const Color textSecondary = Color(0xFF5A6675); // 보조 글자, 선택 안 된 탭
   static const Color textOnButton = Color(0xFF13263A); // 하늘색 버튼 위 글자
-  static const Color textHint = Color(0xFFA1A1AA); // 입력칸 안내 문구
-
+  static const Color textHint = Color(0xFF8A93A0); // 입력칸 안내 문구
+  static const Color inputBorder = Color(0xFFE6E3D8); // 입력칸 테두리
+  static const Color divider = Color(0xFFD9D5C8); // "회원가입 | 비밀번호 찾기" 사이 선
   // 기타
   static const Color border = Color(0xFFEFECE3); // 카드 테두리
   static const Color coin = Color(0xFFF2D23C); // 코인 동그라미

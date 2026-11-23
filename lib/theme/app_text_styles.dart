@@ -101,4 +101,18 @@ class AppTextStyles {
     fontSize: 18,
     color: AppColors.textPrimary,
   );
+  static const TextStyle input = TextStyle(
+    // 입력칸 글자
+    fontFamily: 'Pretendard',
+    fontSize: 16,
+    fontWeight: FontWeight.w400,
+    color: AppColors.textPrimary,
+  );
+  static const TextStyle link = TextStyle(
+    // "회원가입", "비밀번호 찾기"
+    fontFamily: 'Pretendard',
+    fontSize: 14,
+    fontWeight: FontWeight.w600,
+    color: AppColors.textSecondary,
+  );
 }

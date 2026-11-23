@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_text_styles.dart';
 
@@ -9,14 +10,14 @@ class HamaBottomNav extends StatelessWidget {
     required this.onTap,
   });
 
-  final int currentIndex; // 지금 선택된 탭 번호 (0~3)
-  final ValueChanged<int> onTap; // 탭을 눌렀을 때 실행할 함수
+  final int currentIndex;
+  final ValueChanged<int> onTap;
 
   static const _items = [
-    _NavItem(Icons.home_outlined, '홈'),
-    _NavItem(Icons.check_circle_outline, '퀴즈'),
-    _NavItem(Icons.shopping_bag_outlined, '샵'),
-    _NavItem(Icons.person_outline, '마이페이지'),
+    _NavItem('assets/icons/tab_home.svg', '홈'),
+    _NavItem('assets/icons/tab_quiz.svg', '퀴즈'),
+    _NavItem('assets/icons/tab_shop.svg', '샵'),
+    _NavItem('assets/icons/tab_mypage.svg', '마이페이지'),
   ];
 
   @override
@@ -30,7 +31,7 @@ class HamaBottomNav extends StatelessWidget {
         borderRadius: BorderRadius.circular(26),
         boxShadow: const [
           BoxShadow(
-            color: Color(0x1A1E2A38), // 그림자 (남색 10% 투명도)
+            color: Color(0x1A1E2A38),
             blurRadius: 14,
             offset: Offset(0, 8),
           ),
@@ -45,7 +46,7 @@ class HamaBottomNav extends StatelessWidget {
           return Expanded(
             child: GestureDetector(
               onTap: () => onTap(i),
-              behavior: HitTestBehavior.opaque, // 빈 공간을 눌러도 반응하게
+              behavior: HitTestBehavior.opaque,
               child: Container(
                 decoration: BoxDecoration(
                   color: selected ? AppColors.blueLight : Colors.transparent,
@@ -54,7 +55,12 @@ class HamaBottomNav extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(_items[i].icon, size: 22, color: color),
+                    SvgPicture.asset(
+                      _items[i].iconPath,
+                      width: 22,
+                      height: 22,
+                      colorFilter: ColorFilter.mode(color, BlendMode.srcIn),
+                    ),
                     const SizedBox(height: 3),
                     Text(
                       _items[i].label,
@@ -71,9 +77,9 @@ class HamaBottomNav extends StatelessWidget {
   }
 }
 
-// 탭 하나의 아이콘 + 이름을 묶어두는 작은 클래스
+// 탭 하나의 아이콘 경로 + 이름
 class _NavItem {
-  const _NavItem(this.icon, this.label);
-  final IconData icon;
+  const _NavItem(this.iconPath, this.label);
+  final String iconPath;
   final String label;
 }

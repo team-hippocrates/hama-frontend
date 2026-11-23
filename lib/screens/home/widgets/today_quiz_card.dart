@@ -36,14 +36,11 @@ class TodayQuizCard extends StatelessWidget {
           Positioned(
             top: 8,
             right: 34,
-            child: Container(
+            child: Image.asset(
+              'assets/images/hama_mypage.png',
               width: 96,
               height: 117,
-              decoration: BoxDecoration(
-                color: AppColors.blueLight,
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: const Icon(Icons.image_outlined, color: AppColors.blue),
+              fit: BoxFit.contain,
             ),
           ),
           // 글자 + 태그 + 버튼
